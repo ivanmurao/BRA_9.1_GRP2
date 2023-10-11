@@ -21,8 +21,8 @@ jobs:
       - name: Install pytest
         run: pip install pytest
         
-      - name: Run tests
-        run: pytest streamlit-Delos_Reyes/
+      - name: Run streamlit-Delos_Reyes
+        run: pytest streamlit-Delos_Reyes/app.py
 
       - name: Merge on Success
         if: success()
