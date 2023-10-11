@@ -18,11 +18,13 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Install pytest
-        run: pip install pytest
+      - name: Install dependencies
+        run: |
+          pip install pytest
+          pip install streamlit tensorflow opencv-python-headless pillow
         
-      - name: Run streamlit-Delos_Reyes
-        run: pytest streamlit-Delos_Reyes/app.py
+      - name: Run Streamlit App
+        run: streamlit run app.py
 
       - name: Merge on Success
         if: success()
